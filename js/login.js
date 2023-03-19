@@ -17,7 +17,9 @@ loginButton.addEventListener('click', function () {
     //email pass verification::do not do this on client side
 
     if (emailValue == 'abc@gmail.com' && passValue == '12345') {
-        console.log('successful');
+        // console.log('successful');
+        window.location.href = 'bank.html';
+        alert(successful);
     }
     else {
         console.log('invalid user');
