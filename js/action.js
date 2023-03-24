@@ -1,3 +1,14 @@
+//total step
+//add event to button first
+//add event listener to that btn
+//get the value by id  for input/display field
+//if it is input field then you can use .value to access the value
+//if it is not input field then it is need to be access with .innerText
+//convert the value/innertext to number for calculation
+//calculate the value
+//set the value to display field
+//empty the input field
+
 document.getElementById('btn-deposit').addEventListener('click', function () {
     //get the amount from input field
     const inputField = document.getElementById('deposit-amount');
