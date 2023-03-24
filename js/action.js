@@ -39,7 +39,15 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const inputField2 = document.getElementById('withdraw-amount');
     const withdrawAmount = inputField2.value;
     const withdrawAmountInt = parseFloat(withdrawAmount);
+
+    //empty input field
+    inputField2.value = '';
+
     // console.log(withdrawAmountInt)
+    if (isNaN(withdrawAmountInt)) {
+        alert('please provide a valid number');
+        return;
+    }
 
     const withdrawTotal1 = document.getElementById('withdrawTotal');
     const withdrawTotalValue = withdrawTotal1.innerText;
@@ -55,14 +63,13 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     //validation
     if (withdrawAmountInt > newbalanceValueFlt) {
         alert('not enough money');
-        inputField2.value = '';
+        // inputField2.value = '';
         return;
     }
     //add total of converted number
     const newTotal2 = withdrawAmountInt + winthdrawTotalflt;
     // console.log(newTotal2);
     withdrawTotal1.innerText = newTotal2;
-    inputField2.value = '';
 
     //everything after condition should be written after condition
     const newbalance2 = newbalanceValueFlt - withdrawAmountInt;
